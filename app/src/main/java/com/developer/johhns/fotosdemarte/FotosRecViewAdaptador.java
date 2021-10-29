@@ -1,6 +1,7 @@
 package com.developer.johhns.fotosdemarte;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +33,7 @@ public class FotosRecViewAdaptador  extends RecyclerView.Adapter<FotosRecViewAda
 
     @Override
     public void onBindViewHolder(@NonNull FotosRecViewAdaptador.ViewHolder holder, int position) {
-       //holder.foto.setImageResource(  );
-        //holder.foto.setImageResource( fotos.get(position).urlImagen );
+       holder.foto.setImageURI(Uri.parse( fotos.get(position).urlImagen ) );
     }
 
     @Override

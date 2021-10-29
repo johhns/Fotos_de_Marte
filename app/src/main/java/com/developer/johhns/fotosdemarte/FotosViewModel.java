@@ -1,5 +1,6 @@
 package com.developer.johhns.fotosdemarte;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -17,6 +18,14 @@ public class FotosViewModel extends ViewModel {
 
     public FotosViewModel() {
         obtenerlasFotosDeMarte();
+    }
+
+    public LiveData<MarteApiEstado> estado(){
+        return _estado ;
+    }
+
+    public LiveData<List<FotoDeMarte>> fotos(){
+        return _fotos ;
     }
 
     private void obtenerlasFotosDeMarte() {
